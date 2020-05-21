@@ -160,14 +160,115 @@
 //     console.log(key)
 
 
-let i = 0;
-while (i <= 10) {
-    // if (i === 5) break;
-    if (i % 2 === 0) {
-        i++;
-        continue;
-    }
+// let i = 0;
+// while (i <= 10) {
+//     // if (i === 5) break;
+//     if (i % 2 === 0) {
+//         i++;
+//         continue;
+//     }
 
-    console.log(i);
-    i++;
-}
+//     console.log(i);
+//     i++;
+// }
+
+// function max(number1, number2) {
+//     if (number1 > number2)
+//         console.log('Max number is ', + number1)
+//     else
+//         console.log('Max number is ', + number2)
+// }
+
+// max(3, 5)
+
+// function max(number1, number2) {
+//     return (number1 > number2) ? number1 : number2;
+// }
+
+// console.log(max(10, 29));
+
+
+// function max(number1, number2) {
+//     return (number1 > number2) ? number1 : number2;
+// }
+
+// let number = max(10, 29);
+// console.log(number)
+
+
+// function isLandscape(width, height) {
+//     return (width > height) ? 'landscape' : 'portrait';
+// }
+
+// let picture = isLandscape(300, 500);
+// console.log('This picture is ' + picture + '.')
+
+// function isLandscape(width, height) {
+//     return (width > height)
+// }
+
+// console.log(isLandscape(300, 600))
+
+//FizzBuzz Exercise
+
+// const output = fizzBuzz('asd');
+// console.log(output);
+
+// function fizzBuzz(input) {
+//     if (typeof input !== 'number')
+//         return NaN;
+//     if ((input % 3 === 0) && (input % 5 === 0))
+//         return 'FizzBuzz';
+//     if (input % 3 === 0)
+//         return 'Fizz';
+//     if (input % 5 === 0)
+//         return 'Buzz';
+//     return input;
+// }
+
+// My Solution for Ticket Automation
+
+// let speedLimit = 70;
+// let suspendLimit = 130;
+// let output = checkSpeed(75);
+// console.log(output);
+
+// function checkSpeed(speed) {
+//     if (speed <= speedLimit)
+//         return 'Ok';
+//     if (speed >= suspendLimit)
+//         return 'License Suspended';
+//     if (speed >= speedLimit && speed <= suspendLimit)
+//         return ((speed - speedLimit) / 5 >= 1) ? 'Point = ' + Math.floor((speed - speedLimit) / 5)
+//             : 'Ok';
+// }
+
+// Mosh Solution for Ticket Automation
+
+// checkSpeed(71);
+
+// function checkSpeed(speed) {
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+
+//     if (speed < speedLimit + kmPerPoint) {
+//         console.log('Ok');
+//         return;
+//     }
+//     const points = Math.floor((speed - speedLimit) / 5);
+//     if (points >= 12)
+//         console.log('License suspended');
+//     else
+//         console.log('Points', points)
+// }
+
+// showNumbers(10);
+
+// function showNumbers(limits) {
+//     for (let i = 0; i < (limits + 1); i++) {
+//         const message = (i % 2 === 0) ? 'EVEN' : 'ODD'
+//         console.log(i, message);
+//     }
+
+// }
+
