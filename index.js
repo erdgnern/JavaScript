@@ -272,3 +272,112 @@
 
 // }
 
+
+// const array = [1, 2, 3, 4, 5, '', 0, NaN, null, undefined]
+// console.log(countTruthy(array))
+
+// function countTruthy(array) {
+//     let count = 0;
+//     for (let value of array)
+//         if (value)
+//             count++;
+//     return count;
+// }
+
+// const movie = {
+//     title: 'a',
+//     releaseYear: 2018,
+//     rating: 4.5,
+//     director: 'b'
+// };
+
+// showProperties(movie)
+
+// function showProperties(obj) {
+//     strings = []
+//     for (let key in obj)
+//         if (typeof obj[key] === 'string')
+//             console.log(key, obj[key])
+// }
+
+// console.log(sum(20))
+
+// function sum(limit) {
+//     let total = 0
+//     for (i = 1; i < limit; i++)
+//         if ((i % 3 === 0) || (i % 5 === 0))
+//             total += i;
+//     return total
+// }
+
+
+// const marks = [50, 50, 50]
+// console.log(calculateGrade(marks))
+
+
+// function calculateGrade(marks) {
+//     const average = calculateAverage(marks)
+
+//     if (average >= 90) return 'A';
+//     if (average >= 80) return 'B';
+//     if (average >= 70) return 'C';
+//     if (average >= 60) return 'D';
+//     return 'F';
+// }
+
+// function calculateAverage(array) {
+//     let sum = 0;
+//     for (let value of array)
+//         sum += value
+//     return sum / array.length;
+// }
+
+// showStars(5)
+
+// function showStars(rows) {
+//     for (let row = 1; row <= rows; row++) {
+//         let pattern = '';
+//         for (let i = 0; i < row; i++)
+//             pattern += '*';
+//         console.log(pattern);
+//     }
+// }
+
+// showStars(8)
+
+// function showStars(rows) {
+//     let pattern = '';
+//     for (let row = 1; row <= rows; row++) {
+//         pattern += '*';
+//         console.log(pattern);
+//     }
+// }
+
+// showPrimes(50);
+
+// function showPrimes(limit) {
+//     for (let number = 2; number <= limit; number++) {
+//         let isPrime = true;
+//         for (let factor = 2; factor < number; factor++) {
+//             if (number % factor === 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//         if (isPrime) console.log(number);
+//     }
+// }
+
+// showPrimes(25)
+
+// function showPrimes(limit) {
+//     for (let number = 2; number <= limit; number++)
+//         if (isPrime(number)) console.log(number);
+// }
+
+// function isPrime(number) {
+//     for (let factor = 2; factor < number; factor++)
+//         if (number % factor === 0)
+//             return false;
+//     return true;
+// }
