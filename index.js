@@ -343,7 +343,7 @@
 //     }
 // }
 
-// showStars(8)
+// showStars(15)
 
 // function showStars(rows) {
 //     let pattern = '';
@@ -381,3 +381,108 @@
 //             return false;
 //     return true;
 // }
+
+// const circle = {
+//     radius: 1,
+//     location: {
+//         x: 1,
+//         y: 1
+//     },
+//     isVisible: true,
+//     draw: function () {
+//         console.log('draw')
+//     }
+// };
+
+//*****Factory Function****
+
+// function createCircle(radius) {
+//     return {
+//         radius,
+//         draw() {
+//             console.log('draw')
+//         }
+//     };
+// }
+
+// const circle1 = createCircle(1);
+// console.log(circle1);
+
+// const circle2 = createCircle(2);
+// console.log(circle2);
+
+
+// *****Constructor Function******/
+
+// function Circle(radius) {
+//     this.radius = radius;
+//     this.draw = function () {
+//         console.log('draw');
+//     }
+// }
+
+// Circle.call({}, 1);
+// Circle.apply({}, [1, 2, 3]);
+
+// const another = new Circle(1);
+
+// let x = { value: 10 };
+// let y = x;
+// x.value = 20;
+
+// const circle = {
+//     radius: 1,
+//     draw() {
+//         console.log('draw');
+//     }
+// };
+
+// //const another = Object.assign({}, circle);
+
+// const another = { ...circle };
+// console.log(another);
+
+// const myAddress = {
+//     street: 'a',
+//     city: 'b',
+//     zipcode: 'c'
+// }
+
+// function showAddress(address) {
+//     for (let key in address)
+//         console.log(key, address[key])
+
+// };
+
+
+///////////////////////////////////////////////////
+// Factory Function Style
+
+// function showAddress(street, city, zipcode) {
+//     return {
+//         street,
+//         city,
+//         zipCode
+//     }
+// }
+
+// let address = showAddress('a', 'b', 'c')
+// console.log(address);
+
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////
+
+//Constructor Function Style
+
+// function ShowAddress(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipcode = zipCode;
+// }
+
+// const address = new ShowAddress('a', 'b', 'c')
+// console.log(address)
+
+///////////////////////////////////////////////////
+
