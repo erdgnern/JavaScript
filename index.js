@@ -486,3 +486,342 @@
 
 ///////////////////////////////////////////////////
 
+// let address1 = new Address('a', 'b', 'c');
+// let address2 = new Address('a', 'b', 'c');
+// let address3 = address1;
+
+// function Address(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipcode = zipCode;
+// }
+
+// function areEqual(address1, address2) {
+//     return address1.street === address2.street && address1.city === address2.city && address1.zipcode === address2.zipcode;
+// }
+
+// function areSame(address1, address2) {
+//     return address1 === address2;
+// }
+
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+// console.log(areSame(address1, address3));
+
+///////////////////////////////////////////////////////
+
+// const blog = {
+//     title: 'aSample',
+//     body: 'bBoldPilot',
+//     author: 'eEren',
+//     views: 25,
+//     comments: [
+//         { author: 'gGuest1', body: 'nNotgood' },
+//         { author: 'gGuest2', body: 'nNice' }
+//     ],
+//     isLive: true
+// }
+
+//////////////////////////////////////////////////////
+
+// let isdraft = new IsDraft('a', 'b', 'c');
+
+// console.log(isdraft);
+
+// function IsDraft(title, body, author, isLive) {
+//     this.title = title;
+//     this.body = body;
+//     this.author = author;
+//     this.views = 0;
+//     this.comments = [];
+//     this.isLive = false;
+// }
+
+//////////////////////////////////////////////////////////
+
+// let priceRanges = [
+//     { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerson: 10 },
+//     { label: '$', tooltip: 'Moderate', minPerPerson: 11, maxPerson: 20 },
+//     { label: '$', tooltip: 'Expensive', minPerPerson: 21, maxPerson: 50 }
+// ]
+
+//////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+
+// let numbers = [1, 2, 3]
+
+// numbers.push(4, 5) - Add to end
+// numbers.unshift(1,2) - Add to beginning
+// numbers.splice(3, 0, 8) - First beginning index, second deleting item count, third the thing you wanna add
+// numbers.indexOf('a') - to find the first occurence primitive's index.
+// numbers.lastIndexOf ('a') - to find the last occurence primitive's index.
+// console.log(numbers.includes('a')) - if true, it is in the array.
+// numbers/ indexOf(1, 2) - this notation starts the search after 2. index.
+// numbers.pop() - Erase from end
+// numbers.shift() - Erase from beginning
+// numbers.splice (3, 1) - Erase 1 item after 3rd index
+// numbers.lenght = 0; - Emptying an Array
+
+
+// const first = [1, 2, 3];
+// const secon = [4, 5, 6];
+
+// const combined = first.concat(second);
+// console.log(combined); - to combine two array
+
+// const slice = combined.slice(2,4);
+// console.log(slice); - to slice from index 2 to 4 / Cropping
+
+// In ES6, there is spread operator to combine items:***********
+
+// const combined = [...first, ...second]; ***** with this, we can add new item to new array like:
+// const combined = [...first, 'a', ...second, 'b'];
+
+
+//////////////////////Reference Type Find////////////////////
+
+// const courses = [
+//     { id: 1, name: 'a' },
+//     { id: 2, name: 'b' },
+// ];
+
+// const course = courses.find(function (course) {
+//     return course.name === 'a';
+// })
+
+// console.log(course);
+
+
+// ///In ES6
+
+// //Code can be like that (this is called ArrowFunction):
+
+// const course = courses.find(course => course.name === 'a');
+
+// console.log(course);
+
+/////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+
+// //FOREACH METHOD
+
+// const numbers = [1, 2, 3]
+
+// for (let number of numbers)
+//     console.log(number);
+
+// numbers.forEach(number => console.log(number))
+
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+
+/// Joining Arrays - To join array items in a line
+
+// const numbers = [1,2,3];
+// const joined = numbers.join(',');
+// console.log(joined)
+
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+
+//SORTING OBJECTS
+
+// const courses = [
+//     { id: 1, name: 'Node.js' },
+//     { id: 2, name: 'javaScript' },
+// ];
+
+// courses.sort(function(a,b) {
+//     const nameA = a.name.toLowerCase();
+//     const nameB = b.name.toLowerCase();
+
+//     if (nameA<nameB) return -1;
+//     if (nameA>nameB) return 1;
+//     return 0;
+// });
+
+////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////
+
+//Every and Some Methods
+
+// const numbers = [1, -1, 2, 3];
+
+// const allPositive = numbers.every(function (value) {
+//     return value >= 0;
+// });
+
+// console.log(allPositive)
+
+// const numbers = [1, -1, 2, 3];
+
+// const atLeastOnePositive = numbers.some(function (value) {
+//     return value >= 0;
+// });
+
+// console.log(atLeastOnePositive)
+
+// With Arrow Function
+
+// const numbers = [1, -1, 2, 3];
+// const atLeastOnePositive = numbers.some(value => value >= 0);
+// console.log(atLeastOnePositive)
+
+////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////
+
+//Filtering an Array
+
+// const numbers = [1, -1, 2, 3];
+// const positiveFilter = numbers.filter(value => value >= 0);
+// console.log(positiveFilter);
+
+//////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+
+// Mapping an Array
+
+// const numbers = [1, -1, 2, 3];
+// const positiveFilter = numbers.filter(n => n >= 0);
+// const items = positiveFilter.map(n => '<li>' + n + '</li');
+// const html = '<ul>' + items.join('') + '</ul>';
+// console.log(html);
+
+
+// const numbers = [1, -1, 2, 3];
+// const positiveFilter = numbers.filter(n => n >= 0);
+// const items = positiveFilter.map(n => ({ value: n }));
+// console.log(items);
+
+//We dont need to create another const. We can chain them like that. With this we can also change an array to object and object to array endlesly:
+
+// const numbers = [1, -1, 2, 3];
+
+// const items = numbers
+//     .filter(n => n >= 0)
+//     .map(n => ({ value: n }))
+//     .filter(obj => obj.value > 1)
+//     .map(obj => obj.value);
+
+// console.log(items);
+
+//////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+
+//Reducing an Array
+
+// const numbers = [1, -1, 2, 3];
+
+// // let sum = 0;
+// // for (let n of numbers)
+// //     sum += n;
+// // console.log(sum)
+
+// const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+// console.log(sum)
+
+//////////////////////////////////////////////////////////////
+
+
+// const numbers = arrayFromRange(-10, -4);
+// console.log(numbers);
+
+// function arrayFromRange(min, max) {
+//     const output = [];
+//     for (let i = min; i <= max; i++)
+//         output.push(i);
+//     return output;
+// }
+////////////////////////////////////////////////////
+
+// const numbers = [1, 2, 3, 4];
+
+// // console.log(numbers.includes(1))
+
+// function includes(array, searchElement) {
+//     for (let key of array) {
+//         if (key === searchElement)
+//             return true;
+//         return false;
+//     }
+// };
+
+// console.log(includes(numbers, 6))
+
+////////////////////////////////////////////////////
+
+
+
+
+// const numbers = [1, 2, 3, 4];
+// const output = move(numbers, 1, 1);
+
+// console.log(output);
+
+// function move(array, index, offset) {
+//     const position = index + offset;
+//     if (position >= array.length || position < 0) {
+//         console.error('Invalid offset.');
+//         return;
+//     }
+//     const output = [...array];
+//     const element = output.splice(index, 1)[0];
+//     output.splice(index + offset, 0, element);
+//     return output;
+// }
+
+
+/////////////////////////////////////////////////////
+
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+// const count = countOccurences(numbers, 1)
+// console.log(count)
+
+// function countOccurences(array, searchElement) {
+//     //     let output = 0;
+//     //     for (let key of array)
+//     //         if (key === searchElement)
+//     //             output++
+//     //     return output
+//     // }
+
+//     return array.reduce((accumulator, current) => {
+//         const occurence = (current === searchElement) ? 1 : 0;
+//         return accumulator + occurence;
+//     }, 0);
+// }
+
+// const numbers = [21, 2, 3, 4, 20, 18]
+// const max = getMax(numbers);
+// console.log(max);
+
+// function getMax(array) {
+//     if (array.lenght === 0) return undefined;
+//     array.reduce((a, b) => (a > b) ? a : b);
+// }
+
+// // function getMax(array) {
+// //     let sorted = array.reverse()
+// //     return sorted[0]
+// // }
+
+// // function getMax(array) {
+// //     if (array.lenght === 0) return undefined;
+
+// //     return array.reduce((accumulator, current) => {
+// //         let max = 0;
+// //         let maxNumber = (current > array[0]) ? max = current : max = array[0];
+// //         return max
+// //     }, 0);
+// // }
+

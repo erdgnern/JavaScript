@@ -170,3 +170,128 @@
 // const another = { ...circle }; -- without Adding option
 
 /////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////
+
+//EQUALITY AND SAME CHECK
+
+// let address1 = new Address('a', 'b', 'c');
+// let address2 = new Address('a', 'b', 'c');
+// let address3 = address1;
+
+// function Address(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipcode = zipCode;
+// }
+
+// function areEqual(address1, address2) {
+//     return address1.street === address2.street && address1.city === address2.city && address1.zipcode === address2.zipcode;
+// }
+
+// function areSame(address1, address2) {
+//     return address1 === address2;
+// }
+
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+// console.log(areSame(address1, address3));
+
+// Note: Objects which are created by new command, they are equal but not the same object; however, if an object was created like address3 = address1, then they are both equal and same.
+
+///////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////
+
+////////FOREACH METHOD
+
+// const numbers = [1, 2, 3]
+
+// for (let number of numbers)
+//     console.log(number);
+
+// numbers.forEach(number => console.log(number))
+
+///////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////
+
+// Array from Range Example
+
+// const numbers = arrayFromRange(-10, -4);
+// console.log(numbers);
+
+// function arrayFromRange(min, max) {
+//     const output = [];
+//     for (let i = min; i <= max; i++)
+//         output.push(i);
+//     return output;
+// }
+
+////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////
+
+// Exception Check Example
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+// const output = except(numbers, [2])
+// console.log(output);
+
+// function except(array, excluded) {
+//     const output = [];
+//     for (let key of array)
+//         if (!excluded.includes(key))
+//             output.push(key);
+//     return output;
+// }
+
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+
+//Moving and Erasing Example
+
+// const numbers = [1, 2, 3, 4];
+// const output = move(numbers, 1, 1);
+
+// console.log(output);
+
+// function move(array, index, offset) {
+//     const position = index + offset;
+//     if (position >= array.length || position < 0) {
+//         console.error('Invalid offset.');
+//         return;
+//     }
+//     const output = [...array];
+//     const element = output.splice(index, 1)[0];
+//     output.splice(index + offset, 0, element);
+//     return output;
+// }
+
+///////////////////////////////////////////////////////
+
+//Count Occurences
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+// const count = countOccurences(numbers, 1)
+// console.log(count)
+
+    //First Solution
+
+// function countOccurences(array, searchElement) {
+//     let output = 0;
+//     for (let key of array)
+//         if (key === searchElement)
+//             output++
+//     return output
+// }
+
+    //Second Solution
+
+// function countOccurences(array, searchElement) {   
+//     return array.reduce((accumulator, current) => {
+//         const occurence = (current === searchElement) ? 1 : 0;
+//         return accumulator + occurence;
+//     }, 0);
+// }
